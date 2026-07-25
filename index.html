@@ -1,0 +1,241 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Twin Paradox Time Travel, Myth, or Science?</title>
+<style>
+  :root{
+    --ink:#12203b;
+    --ink-soft:#3d4a63;
+    --paper:#f7f5ef;
+    --card:#ffffff;
+    --line:#d9d5c8;
+    --earth:#2a6fb0;
+    --ship:#2a6fb0;
+    --star:#4a90d9;
+    --tablebg:#e8eff7;
+    --tablehead:#2f4a6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-size:18px;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+
+  header{
+    background:var(--ink);color:#f4f1e8;padding:60px 0 50px;text-align:center;position:relative;overflow:hidden;
+  }
+  header .stars{position:absolute;inset:0;opacity:.5;}
+  header .wrap{position:relative;z-index:2;}
+  .eyebrow{font-family:Arial,Helvetica,sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#c9d4e6;margin-bottom:18px;}
+  header h1{font-size:42px;line-height:1.15;font-weight:normal;margin-bottom:14px;}
+  header h1 em{color:#7fb2e5;font-style:italic;}
+  header p.sub{font-size:18px;color:#cbd4e2;max-width:560px;margin:0 auto;}
+  .byline{margin-top:24px;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#8fa1bd;letter-spacing:.04em;}
+
+  section{padding:46px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .kicker{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ship);margin-bottom:10px;}
+  h2{font-size:28px;font-weight:normal;margin-bottom:18px;line-height:1.2;}
+  p.intro{color:var(--ink-soft);margin-bottom:16px;font-size:18px;}
+
+  ul.facts{list-style:none;margin:6px 0 0;}
+  ul.facts li{
+    position:relative;padding:9px 0 9px 26px;color:var(--ink-soft);
+    border-bottom:1px solid var(--line);font-size:17px;line-height:1.5;
+  }
+  ul.facts li:last-child{border-bottom:none;}
+  ul.facts li::before{
+    content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;
+    background:var(--ship);border-radius:50%;
+  }
+  ul.facts li strong{color:var(--ink);}
+
+  .stats{display:flex;gap:22px;flex-wrap:wrap;margin:24px 0 4px;}
+  .stat{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px;text-align:center;}
+  .stat .n{font-size:32px;line-height:1;display:block;}
+  .stat .n.earth{color:var(--earth);}
+  .stat .n.ship{color:var(--ship);}
+  .stat .l{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#7a7566;text-transform:uppercase;letter-spacing:.08em;margin-top:9px;display:block;}
+
+  .tablecard{background:var(--tablebg);border-radius:6px;padding:26px 28px 30px;margin:22px 0 6px;}
+  .tablecard .thead{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--tablehead);display:inline-block;padding:5px 12px;border-radius:3px;margin-bottom:14px;}
+  .tablecard h3{font-size:21px;font-weight:normal;margin-bottom:16px;color:var(--ink);}
+  table{width:100%;border-collapse:collapse;font-size:16px;}
+  table th{
+    text-align:left;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:normal;
+    letter-spacing:.06em;text-transform:uppercase;color:#4a6a8a;
+    padding:8px 10px;border-bottom:1.5px solid #b9cde0;
+  }
+  table td{padding:9px 10px;border-bottom:1px solid #cdddec;color:var(--ink-soft);}
+  table tr:last-child td{border-bottom:none;}
+  table td.g{color:var(--ink);font-variant-numeric:tabular-nums;}
+  table tr.key td{background:#d5e4f2;color:var(--ink);}
+  table tr.key td.g{color:var(--ship);font-weight:bold;}
+  .formula{text-align:center;font-family:'Courier New',monospace;font-size:18px;color:var(--ink);margin:4px 0 20px;}
+  .caption{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6a8a;margin-top:14px;line-height:1.5;}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+  .ev{background:var(--card);border:1px solid var(--line);padding:20px;border-radius:4px;}
+  .ev .tag{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ship);display:block;margin-bottom:8px;}
+  .ev .big{font-size:26px;color:var(--ink);display:block;line-height:1.1;margin-bottom:6px;}
+  .ev p{font-size:14px;color:var(--ink-soft);line-height:1.5;}
+
+  blockquote{border-left:3px solid var(--star);padding:4px 0 4px 20px;margin:4px 0 0;font-style:italic;color:var(--ink);font-size:18px;}
+  blockquote cite{display:block;font-style:normal;font-size:13px;color:#7a7566;margin-top:8px;font-family:Arial,Helvetica,sans-serif;}
+
+  .verdict{background:var(--ink);color:#f4f1e8;border-radius:6px;padding:28px 30px;margin-top:8px;}
+  .verdict .big{font-size:22px;color:#fff;font-style:italic;margin-bottom:14px;display:block;text-align:center;}
+  .verdict ul{list-style:none;}
+  .verdict li{position:relative;padding:7px 0 7px 24px;color:#dbe2ee;font-size:17px;}
+  .verdict li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--star);border-radius:50%;}
+
+  .src{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#7a7566;margin-top:14px;}
+  footer{background:#0d1729;color:#8fa1bd;text-align:center;padding:26px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;}
+
+  @media(max-width:620px){
+    header h1{font-size:31px;}
+    h2{font-size:24px;}
+    .cards{grid-template-columns:1fr;}
+    body{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="stars" preserveAspectRatio="none" viewBox="0 0 800 300">
+    <g fill="#ffffff">
+      <circle cx="60" cy="40" r="1.1"></circle><circle cx="140" cy="90" r="0.8"></circle><circle cx="240" cy="50" r="1.3"></circle>
+      <circle cx="330" cy="120" r="0.9"></circle><circle cx="420" cy="60" r="1"></circle><circle cx="520" cy="100" r="1.2"></circle>
+      <circle cx="600" cy="45" r="0.8"></circle><circle cx="690" cy="110" r="1.1"></circle><circle cx="760" cy="55" r="0.9"></circle>
+      <circle cx="100" cy="180" r="0.9"></circle><circle cx="200" cy="230" r="1.2"></circle><circle cx="300" cy="200" r="0.8"></circle>
+      <circle cx="470" cy="220" r="1"></circle><circle cx="560" cy="190" r="0.9"></circle><circle cx="660" cy="235" r="1.1"></circle>
+      <circle cx="740" cy="200" r="0.8"></circle><circle cx="380" cy="255" r="1"></circle>
+    </g>
+  </svg>
+  <div class="wrap">
+    
+    <h1>The Twin Paradox<br><em>Time Travel: Myth, or Science?</em></h1>
+    <p class="sub">One twin flies near the speed of light. The other stays still. When they reunite, one is younger.</p>
+    
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Basic Introduction</div>
+    <h2>What is the twin paradox?</h2>
+    <ul class="facts">
+      <li><strong>Special relativity:</strong> everyone measures light at the same speed, no matter how they move.</li>
+      <li><strong>Time dilation:</strong> because of that, a moving clock ticks slower than a still one.</li>
+      <li>One twin flies to a distant star near light speed and the other stays on Earth.</li>
+      <li>When they reunite, the <strong>traveling twin has aged less</strong>.</li>
+      <li><strong>Why it seems like a contradiction:</strong> We know that motion is relative, so each twin sees the <em>other</em> as moving and each expects the other's clock to be the slow one. Both can't be right.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The Numbers</div>
+    <h2>Trip to a star 20 light-years away, at 0.99c</h2>
+    <div class="stats">
+      <div class="stat"><span class="n earth">40.4</span><span class="l">years on Earth</span></div>
+      <div class="stat"><span class="n ship">5.6</span><span class="l">years for traveler</span></div>
+      <div class="stat"><span class="n">7.09</span><span class="l">Lorentz factor (γ)</span></div>
+      <div class="stat"><span class="n">~34.8</span><span class="l">years younger</span></div>
+    </div>
+    
+
+    <div class="tablecard">
+      <span class="thead">Table 18.2</span>
+      <h3>Selected Lorentz factor</h3>
+      <div class="formula">γ = 1 / √(1 − v²/c²)</div>
+      <table>
+        <tbody><tr><th>Speed (v/c)</th><th>Lorentz factor γ</th></tr>
+        <tr><td>0.10</td><td class="g">1.005</td></tr>
+        <tr><td>0.20</td><td class="g">1.02</td></tr>
+        <tr><td>0.30</td><td class="g">1.05</td></tr>
+        <tr><td>0.40</td><td class="g">1.09</td></tr>
+        <tr><td>0.50</td><td class="g">1.15</td></tr>
+        <tr><td>0.60</td><td class="g">1.25</td></tr>
+        <tr><td>0.70</td><td class="g">1.40</td></tr>
+        <tr><td>0.80</td><td class="g">1.67</td></tr>
+        <tr><td>0.90</td><td class="g">2.29</td></tr>
+        <tr><td>0.95</td><td class="g">3.20</td></tr>
+        <tr class="key"><td>0.99</td><td class="g">7.09</td></tr>
+        <tr><td>0.995</td><td class="g">10.01</td></tr>
+        <tr><td>0.999</td><td class="g">22.37</td></tr>
+        <tr><td>0.9999</td><td class="g">70.71</td></tr>
+      </tbody></table>
+      <p class="caption">The Lorentz factor tells you how much slower a moving clock ticks. At 0.99c it is 7.09, so the traveler's clock runs 7.09× slower than Earth's. The closer to light speed, the more time stretches. (Table 18.2)</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The Resolution</div>
+    <h2>Is it really a paradox?</h2>
+    <ul class="facts">
+      <li><strong>No — the two twins aren't in the same situation.</strong></li>
+      <li>Only the traveling twin speeds up, turns around, and comes back.</li>
+      <li>So only that twin <strong>changes reference frames and feels acceleration</strong>.</li>
+      <li>The Earth twin stays in one frame the whole time.</li>
+      <li>That broken symmetry is what makes the traveler the one who is truly younger.</li>
+    </ul>
+    
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The Evidence</div>
+    
+    <div class="cards">
+      <div class="ev">
+        <span class="tag">Cosmic-ray muons</span>
+        <span class="big">15 km</span>
+        <p>Formed 15 km up, muons should decay before reaching the ground — but their speed slows their clocks, so they survive. (Fig. 18.7)</p>
+      </div>
+      <div class="ev">
+        <span class="tag">GPS satellites</span>
+        <span class="big">0.5 km/day</span>
+        <p>Satellite clocks run fast. Without a relativity correction, your location would drift by up to half a kilometer a day. (Ch. 18.3)</p>
+      </div>
+      
+      <div class="ev">
+        <span class="tag">Astronauts</span>
+        <span class="big">&lt; 1 sec</span>
+        <p>Astronauts on long missions return a fraction of a second younger than they would have on Earth — a real, tiny twin paradox.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The Verdict</div>
+    <h2>Time travel, myth, or science?</h2>
+    <div class="verdict">
+      <span class="big">Science is the answer.</span>
+      <ul>
+        <li>It only <em>looks</em> like a contradiction.</li>
+        <li>Modern science confirms it is real.</li>
+        <li>We test it and rely on it every day.</li>
+        <li>It isn't a true paradox — just the theory of relativity in reality.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+</body></html>
